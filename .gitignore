@@ -1,0 +1,11 @@
+venv/
+venv312/
+__pycache__/
+*.pyc
+node_modules/
+*.whl
+.env
+.DS_Store
+dist/
+build/
+.env

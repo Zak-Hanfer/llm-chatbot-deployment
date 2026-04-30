@@ -1,0 +1,23 @@
+services:
+  backend:
+    build: ./Backend
+    ports:
+      - "8000:8000"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+    volumes:
+      - "/mnt/c/Users/Zaki Hanfer/.cache/huggingface:/root/.cache/huggingface"
+
+  frontend:
+    build: ./my-app
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
