@@ -43,6 +43,7 @@ Phi-3-mini (GPU)
 - PyTorch
 
 ## 📁 Project Structure
+```
 .
 ├── Backend/
 │   ├── app.py          # FastAPI server
@@ -56,7 +57,7 @@ Phi-3-mini (GPU)
 │   └── Dockerfile
 ├── docker-compose.yml
 └── README.md
-
+```
 ## 🔧 Configuration
 
 Set your HuggingFace token in `docker-compose.yml`:
@@ -65,12 +66,6 @@ Set your HuggingFace token in `docker-compose.yml`:
 environment:
   - HF_TOKEN=your_token_here
 ```
-
-## 📊 Performance
-
-- Model load time: ~21 seconds (GPU)
-- Response time: 2-5 seconds (GPU)
-- VRAM usage: ~5GB
 
 ## 📝 License
 
